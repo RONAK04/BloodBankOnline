@@ -27,7 +27,7 @@ SECRET_KEY = '+zy!9k=9pql5gz9bkqjore)k6r!%w0atk(@(!(!zvp5e(t2i8n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["blood-bank-app-online.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["blood-bank-app-online.herokuapp.com", "localhost",'0.0.0.0:5000']
 
 
 # Application definition
@@ -81,12 +81,14 @@ WSGI_APPLICATION = 'bloodbankmanagement.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd1ljuseqdnglf4',
+        'HOST': 'ec2-44-194-117-205.compute-1.amazonaws.com',
+        'PORT': 5432,
+        'USER': 'xxochwxuaiatmj',
+        'PASSWORD':'a3c06eecda3ed207c61abd3cc3cd6b5cf8bf6cfa18add474bcdb20f92451a4a5',
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -117,7 +119,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)
